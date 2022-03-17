@@ -1,5 +1,182 @@
 <html>
   <a href="../index.html"> Back Home </a>
-  Place holder for event site
+  <html>
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="https://pngimg.com/uploads/balloon/balloon_PNG4961.png">
+    <title> Event Website </title>
+
+  <head>
+     <nav>
+      <li class="nav"><a href="index.html"> Home </a></li>
+      <li class="nav"><a href="noun.html"> Noun Project </a></li>
+      <li class="nav"><a href="convince.html"> Convince Project </a></li>
+      <li class="nav"><a href="restaurant.html"> Restaurant Project </a></li>
+      <li><a hreft="event/index.html"> Event Project </a><li>
+      </nav>
+  </head>
+  
+  <body>
+ 
+      <center>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vTR6LOaFxpM9h4OH5u5AV0L4wsq9qG_nQXxZGDZuMJxnKHozKQrajUvBZ8lgxfbGvZH6PrL3n0kakET/pub?w=960&h=720"
+     </center>
+      
+        </body>
+      
+   <div class="wrapper">
+<div class="A">
+  
+  When is it?: October 26th, at 3:33:33 PM
+  <p id="demo"></p>
+  <script>
+
+var countDownDate = new Date("Oct 26, 2022 15:33:33").getTime();
+
+
+var x = setInterval(function() {
+
+ 
+  var now = new Date().getTime();
+    
+ 
+  var distance = countDownDate - now;
+    
+ 
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+ 
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script></div>
+     <div class="B"></div>
+<div class="C">  
+  
+  
+<div class="D">
+  A picture of what to expect!!!!!!
+    <img src="https://brightspotcdn.byu.edu/e1/c8/8f11f33c3f731867ebe84e55a28c/balloons3.jpg" width="600" height="350" >
+</div>
+
+ 
+</div>
   
 </html>
+
+<style>
+  body{  background-image:url(https://media.istockphoto.com/photos/multicolored-balloons-filled-with-water-prepared-for-the-game-picture-id1255703429?k=20&m=1255703429&s=170667a&w=0&h=4iWFXAVswFibni7OeBC7twmWi0FOXNqNS5HcQ2IMKiI=);
+    background-size: cover;}
+
+p {
+color: black;
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+
+h1 {
+  color: #F70FE0;
+}
+
+nav{
+  list-style-type: none;
+  position: fixed;
+  background-color: #1AACEF ;
+    width: 100%;
+}
+
+li{
+  display: inline;
+  padding: 56px;
+ 
+}
+
+a{
+  text-decoration: none;
+  color: #FF33AA;
+  font-size: 150%
+}
+
+li a:hover {
+  background-color: white
+}
+
+.wrapper{
+  display: grid;
+  height: 90vh;
+  grid-template:
+    "A B C" auto
+    "D";
+    grid-template-columns: 15% 50% 35%;
+  grid-row-gap: 5px;
+  grid-column-gap: 5px ;
+}
+div {
+  background-color: #1AACEF ;
+  border: solid 3px #FF33AA;
+}
+
+.A {
+  grid-column: 1 / 4;
+  color: white;
+}
+
+.B {
+  grid-area: 2 / 1 / 8 / 3;
+}
+
+.C {
+  grid-area: 2 / 3 / 5 / 4;  
+}
+
+.D {
+  grid-area: 5 / 3 / 8 / 4;
+  color: white;
+}
+
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+  color: white;
+} 
+
+@media only screen and (max-width: 1024px) {
+  .wrapper{
+    flex-direction: column;
+  }
+  body {
+    background:#1AACEF;
+    flex-direction: column;
+  }
+  .A {
+    border: solid;
+    color: white;
+  }
+   .B {
+    border: solid;
+    color: white;
+  }
+   .C {
+    border: solid;  
+    color: white;
+  }
+  .D {
+    border: solid;
+    color: white;
+  }
+div {
+  background-color: #FF33AA;
+  border: solid 3px white;
+}
+    </style>
