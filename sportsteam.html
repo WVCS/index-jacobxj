@@ -1,12 +1,14 @@
 <html>
+  <html>
   <nav>
       <li class="nav"><a href="index.html"> Home </a></li>
       <li class="nav"><a href="noun.html"> Noun Project </a></li>
       <li class="nav"><a href="convince.html"> Convince Project </a></li>
       <li class="nav"><a href="restaurant.html"> Restaurant Project </a></li>
-      <li class="nav"><a href="event.html"> Event Project </a><li>
+      <li class="nav"><a href="event.html"> Event Project </a>
      <li class="nav"><a href="sportsteam.html"> Sports Team Project </a><li>
       </nav>
+  
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -122,6 +124,37 @@ img {vertical-align: middle;}
     
   </body>
     
+    <script>
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+     </script>
+       
       <div class="slideshow-container">
 
 <div class="mySlides fade">
@@ -159,41 +192,9 @@ img {vertical-align: middle;}
   <span class="dot" onclick="currentSlide(2)"></span> 
   <span class="dot" onclick="currentSlide(3)"></span> 
   <span class="dot" onclick="currentSlide(4)"></span>
-  
-  <script>
-  
-  ar slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-                              
-  </script>
     </div>
-     
+    
+    
     <div class="wrapper">
 <div class="A">Our Next Game!!!!
   <p id="demo"></p>
@@ -258,8 +259,7 @@ var x = setInterval(function() {
 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDb50W8-tsxsWyOw3R4BifZr6h4lMtW1xAvJCofGRue0MkNQ/viewform?usp=pp_url"><img src="https://alphabetimals.com/wp-content/uploads/W5.png" alt="HTML tutorial" style="width:300px;height:300px;"></a></div>
 
 </div>
-      </body>
- 
+
   </html>
 
 <style> 
