@@ -17,7 +17,6 @@
       <a href="event/index.htm">Event Project</a>
       <a href="sportsteam.html">Sports Team Project</a>
       <a href="band.html">Band Project</a>
-      <a href="caillou.html">Themepark Project</a>
     </div>
   </div> 
 </div>
@@ -93,6 +92,46 @@
     </div>
     <div class="column">
       <img class="demo cursor" src="https://docs.google.com/drawings/d/e/2PACX-1vSgHRmAauUOjxEsT2lRxP-6TLCvGfGRW77dgUubmJEWPSGllcV7u7IVjYmSTnEZut0NIxP552GQhvrh/pub?w=758&h=569" style="width:100%" onclick="currentSlide(4)" alt="Caillou's Awesome Airplanes">
+      
+           <script>
+      function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+      </script>
+      
     </div>
   </div>
 </div></div>
@@ -146,8 +185,25 @@
 
     <button onclick="topFunction()"   
 id="topbtn">GO TO TOP </button>
+    
+    <script>
+       function topFunction() {
+ document.body.scrollTop=0;
+document.documentElement.scrollTop=0;
+}
+
+function hideFunction() {
+  if (document.body.scrollTop > 1000 ||
+     document.documentElement.scrollTop > 1000) document.getElementById("topbtn").style.display="block";
+  else{   document.getElementById("topbtn").style.display="none";
+  }
+}
+
+window.onscroll = function() {hideFunction()};
+    </script>
 </body>
 
+ 
   </html>
   
   <style>
